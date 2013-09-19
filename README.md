@@ -6,7 +6,7 @@ JQuery plugin to json serialize form inputs to JSON
 Version
 ----
 
-2.0
+1.0
 
 JQuery .serialize()
 -----
