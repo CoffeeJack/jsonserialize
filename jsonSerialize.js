@@ -8,6 +8,7 @@ Comment: Use this plugin to quickly grab form fields into a JSON
                 var form = this;
         var inputs = $(this).find('input');
         var selects = $(this).find('select');
+        var textareas = $(this).find('textarea');
         var json = {};
 
         $.each(inputs,function(key,val){
@@ -20,6 +21,12 @@ Comment: Use this plugin to quickly grab form fields into a JSON
         })
 
         $.each(selects,function(key,val){
+                if($(val).attr("name")){
+                        json[$(val).attr("name")] = $(val).val();
+                }
+        });
+
+        $.each(textareas,function(key,val){
                 if($(val).attr("name")){
                         json[$(val).attr("name")] = $(val).val();
                 }

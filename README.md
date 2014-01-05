@@ -37,6 +37,10 @@ You may be familiar with JQuery's .serialize() call, which allows you to turn so
   <label for="r1">radio1</label>
   <input type="radio" name="radio" value="radio2" id="r2">
   <label for="r2">radio2</label>
+
+  <br>
+  <textarea name="textarea">BlahBlahBlah</textarea>
+  <label for="ch1">textarea1</label>
 </form>
 ```
 <br />
@@ -47,7 +51,7 @@ $('form').serialize();
 <br />
 You get something like this:
 ```sh
-single=Single&multiple=Multiple&multiple=Multiple3&check=check2&radio=radio1
+single=Single&multiple=Multiple&multiple=Multiple3&check=check2&radio=radio1&textarea=BlahBlahBlah
 ```
 <br />
 For more info please checkout: http://api.jquery.com/serialize/
@@ -62,7 +66,7 @@ $('form').jsonSerialize();
 <br />
 And you will get:
 ```sh
-{"check":"check2","radio":"radio2","single":"Single","multiple":["Multiple","Multiple3"]} 
+{"check":"check2","radio":"radio2","single":"Single","multiple":["Multiple","Multiple3"],"textarea":"BlahBlahBlah"}
 ```
 
 
